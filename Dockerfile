@@ -23,8 +23,8 @@ RUN apk add --update --no-cache paxctl attr ca-certificates wget \
  && setfattr -n user.pax.flags -v "mr" java \
  && setfattr -n user.pax.flags -v "mr" javac \
 # ---
- && rm -Rf /glibc-2.29-r0.apk \
- && apk del paxctl attr ca-certificates wget 
+ && rm -Rf /glibc-2.29-r0.apk
+# && apk del paxctl attr ca-certificates wget 
 
 # Metadata params
 ARG BUILD_DATE
